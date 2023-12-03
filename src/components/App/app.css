@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #003082;
+  --secondary-color: #ffc917;
+  --tertiary-color: #0063d3;
+  --grey: #6a697a;
+  --error: #fe3465;
+}
+
+@font-face {
+  font-family: "NS Sans";
+  src: local("NS Sans"), url("../../assets/fonts/nssans.woff2") format("woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "NS Sans";
+}
