@@ -3,7 +3,7 @@ import Logo, { LogoProps } from "../Layout/Logo";
 
 const NavLogo = (props: LogoProps) => {
   return (
-    <Link to={"/"}>
+    <Link aria-label="Link naar de home-pagina" to={"/"}>
       <Logo {...props} className="max-w-logo h-auto" />
     </Link>
   );
