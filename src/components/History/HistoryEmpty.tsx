@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 const HistoryEmpty = () => {
   return (
     <div>
-      <h2>Helaas heb je nog niks gezocht</h2>
+      <h2 className="mb-6">Helaas heb je nog niks gezocht</h2>
       <Link to="/">
         <Button>Klik hier om te beginnen met zoeken</Button>
       </Link>
