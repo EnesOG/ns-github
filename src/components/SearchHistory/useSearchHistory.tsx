@@ -5,12 +5,13 @@ export interface useSearchHistoryProps {
 }
 
 const useSearchHistory = ({ search }: useSearchHistoryProps) => {
-  const filters = Object.entries(search[0][3]).filter(
+  const [key] = search;
+  const filters = Object.entries(key?.[3]).filter(
     ([_, values]) => values.length !== 0
   );
-  const label = `Jouw zoek:  ${search[0][1]} - ${search[0][2].label} ${
+  const label = `Jouw zoek:  ${key?.[1]} - ${key?.[2].label} ${
     filters.length !== 0
-      ? `- Filters: ${Object.entries(search[0][3]).map(
+      ? `- Filters: ${Object.entries(key?.[3]).map(
           ([key, values]) => `${key} -> ${values}`
         )}`
       : ``
