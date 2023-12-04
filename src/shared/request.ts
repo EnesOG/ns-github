@@ -5,9 +5,8 @@ async function request<T = Response>(
   init?: RequestInit | undefined
 ) {
   let response = await fetch(baseApiUrl(input), init);
-  return await response
-    .json()
-    .then((res: T) => (response.ok ? res : Promise.reject(res)));
+  if (!response.ok) return Promise.reject(response.json());
+  return response.json() as T;
 }
 
 export default request;
